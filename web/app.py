@@ -178,10 +178,6 @@ def analysis():
                            chart2_url=chart2_url)
 
 
-if __name__ == '__main__':
-    # Ensure the static directory exists
-    os.makedirs(app.static_folder, exist_ok=True)
-    # Run the app
-    app.run(debug=True)
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    os.makedirs(app.static_folder, exist_ok=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
