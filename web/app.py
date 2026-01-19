@@ -183,3 +183,5 @@ if __name__ == '__main__':
     os.makedirs(app.static_folder, exist_ok=True)
     # Run the app
     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
